@@ -1,0 +1,96 @@
+---
+title: "Elise's Dashboards"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    
+    
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(tidyverse)
+library(plotly)
+library(readxl)
+library(flexdashboard)
+library(p8105.datasets)
+data("rest_inspec")
+
+
+
+nyc_inspec = 
+  rest_inspec %>%
+  janitor::clean_names()
+```
+
+
+```{r}
+knitr::opts_chunk$set(
+  fig.width = 6,
+  fig.asp = .6,
+  out.width = "90%"
+)
+
+theme_set(theme_minimal() + theme(legend.position = "bottom"))
+
+options(
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis"
+)
+
+scale_colour_discrete = scale_colour_viridis_d
+scale_fill_discrete = scale_fill_viridis_d
+
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+nyc_inspec = 
+  nyc_inspec %>%
+  janitor::clean_names() %>%
+  select(boro, zipcode, cuisine_description, score, grade) %>%
+  mutate(
+    score = as.numeric(score)
+  ) %>%
+  drop_na(score)
+
+scatter_nyc_inspec = sample_n(nyc_inspec, 1000) %>%
+  mutate(text_label = str_c("score: ", score, "grade: ", grade)) %>%
+  plot_ly(
+    x = ~cuisine_description, y = ~score, type = "scatter", mode = "markers",
+    color = ~boro, text = ~text_label, alpha = 0.5)
+
+scatter_nyc_inspec
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+boxplot_nyc_inspec = sample_n(nyc_inspec, 1000) %>%
+  mutate(boro = fct_reorder(boro, score)) %>%
+  plot_ly(y = ~score, color = ~boro, type = "box", colors = "viridis")
+
+boxplot_nyc_inspec
+```
+
+### Chart C
+
+```{r}
+barplot_nyc_inspec = sample_n(nyc_inspec, 1000) %>%
+  group_by(boro) %>%
+  mutate(mean_score = mean(score)) %>%
+  select(boro, mean_score) %>%
+  unique() %>%
+  plot_ly(x = ~boro, y = ~mean_score, type = "bar", colors = "viridis")
+
+barplot_nyc_inspec
+```

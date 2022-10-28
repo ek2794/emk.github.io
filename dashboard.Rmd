@@ -60,15 +60,6 @@ nyc_inspec =
   ) %>%
   drop_na(score)
 
-head(nyc_inspec)
-```
-
-Column {data-width=350}
------------------------------------------------------------------------
-
-### Chart B
-
-```{r}
 scatter_nyc_inspec = sample_n(nyc_inspec, 1000) %>%
   mutate(text_label = str_c("score: ", score, "grade: ", grade)) %>%
   plot_ly(
@@ -78,7 +69,10 @@ scatter_nyc_inspec = sample_n(nyc_inspec, 1000) %>%
 scatter_nyc_inspec
 ```
 
-### Chart C
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
 
 ```{r}
 boxplot_nyc_inspec = sample_n(nyc_inspec, 1000) %>%
@@ -86,4 +80,17 @@ boxplot_nyc_inspec = sample_n(nyc_inspec, 1000) %>%
   plot_ly(y = ~score, color = ~boro, type = "box", colors = "viridis")
 
 boxplot_nyc_inspec
+```
+
+### Chart C
+
+```{r}
+barplot_nyc_inspec = sample_n(nyc_inspec, 1000) %>%
+  group_by(boro) %>%
+  mutate(mean_score = mean(score)) %>%
+  select(boro, mean_score) %>%
+  unique() %>%
+  plot_ly(x = ~boro, y = ~mean_score, type = "bar", colors = "viridis")
+
+barplot_nyc_inspec
 ```
