@@ -1,0 +1,14 @@
+name: "Elise's Website"
+output_dir: "."
+navbar:
+  title: "Home"
+  right:
+    - text: "About"
+      href: about.html
+    - icon: fa-envelope fa-lg
+      href: mailto:<elisekpx@gmail.com.com>
+    - icon: fa-github fa-lg
+      href: http://github.com/ek2794/
+output:
+  html_document:
+    theme: cerulean
