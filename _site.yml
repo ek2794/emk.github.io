@@ -8,7 +8,7 @@ navbar:
     - icon: fa-envelope fa-lg
       href: mailto:<elisekpx@gmail.com.com>
     - icon: fa-github fa-lg
-      href: http://github.com/ek2794/emk
+      href: http://github.com/ek2794/
 output:
   html_document:
     theme: cerulean
