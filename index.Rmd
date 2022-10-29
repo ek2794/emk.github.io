@@ -6,14 +6,13 @@ output:
     toc_float: true
 
 ---
-Welcome to Elise's website!
+Hello! Welcome to Elise's website!
 
 
 <img src="images/EK_headshot.jpg" style="width:50%">
 
 
-This is my first website that I am building with Data Sciences I class. Here is a little bit about myself and also create a dashboard on the restaurant inspections in NYC. 
-
+This is my first website that I am building through the Data Sciences I class. Here is a little bit about myself. 
 
 Here is a snapshot of my resume with my education and work experience. 
 <img src="images/resume.jpg" style="width:100%">

@@ -4,6 +4,6 @@ title: "About"
 
 ### About this site
 
-Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
+This website was made via R Studio and was generated through Github. 
 
-If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.
+This RStudio is from 2022.07.1 Build 554 titled "Spotted Wakerobin"
