@@ -12,10 +12,8 @@ Hello! Welcome to Elise's website!
 <img src="images/EK_headshot.jpg" style="width:50%">
 
 
-This is my first website that I am building through the Data Sciences I class. Here is a little bit about myself. 
 
-Here is a snapshot of my resume with my education and work experience. 
-<img src="images/resume.jpg" style="width:100%">
+Here you will find information [about](about.html) myself as well as a [dashboard](dashboard.html) if you are interested in learning more about NYC restaurant inspections!
 
 
 
@@ -32,4 +30,3 @@ Last but not least, I have an 18 month old son named Thomas.
 <img src="images/jiho.jpg" style="width:30%">
 
 
-Click [here](dashboard.html) if you are interested in learning more about NYC restaurant inspections!

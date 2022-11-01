@@ -2,8 +2,37 @@
 title: "About"
 ---
 
-### About this site
 
-This website was made via R Studio and was generated through Github. 
+**EDUCATION**
 
-This RStudio is from 2022.07.1 Build 554 titled "Spotted Wakerobin"
+Case Western Reserve University School of Medicine, MD 
+
+Harvard University, BA
+
+
+
+
+<br>  
+<br>  
+
+**WORK EXPERIENCES**
+
+Department of Pediatric Gastroenterology (2021-Present) <br> 
+Columbia University
+Pediatric Gastroenterology Fellow
+
+
+
+Department of Pediatrics (2018-2021) <br> 
+Columbia University
+Pediatric Resident
+
+
+
+Healthcare Innovation Technology Lab (2013-2014) <br> 
+Research Coordinator
+
+
+
+Teach for America: Brooklyn Ascend Charter School (2012-2013) <br> 
+Corps Member
