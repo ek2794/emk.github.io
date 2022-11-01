@@ -13,7 +13,7 @@ Hello! Welcome to Elise's website!
 
 
 
-Here you will find information [about](about.html) as well as a [dashboard](dashboard.html) if you are interested in learning more about NYC restaurant inspections!
+Here you will find information [about](about.html) me as well as a [dashboard](dashboard.html) if you are interested in learning more about NYC restaurant inspections!
 
 
 I am currently a pediatric gastroenterology fellow at [Columbia](https://www.pediatrics.columbia.edu/education/fellowship-training/gastroenterology-hepatology-and-nutrition)
